@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/02981573a7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <div class="container container_header">
+                <div class="left-header-block">
+                    <div class="logo">
+                        <a href="#">
+                            <i class="fab fa-shopify logo__img"></i>
+                        </a>
+                    </div>
+                    <div class="menu">
+                        <a href="#" class="menu__item">О нас</a>
+                        <a href="#" class="menu__item">Каталог</a>
+                        <a href="#" class="menu__item">Услуги</a>
+                        <a href="#" class="menu__item">Контакты</a>
+                    </div>
+                </div>
+                <div class="right-header-block">
+                        <div class="basket">
+                            <i class="fas fa-shopping-cart basket__icon"></i>
+                            <div class="basket__mobile-info">
+                                <span class="basket__mobile-quantity">0</span>
+                            </div>
+                        </div>
+                        <div class="info-basket">
+                            <p class="info-basket__p">Товаров: <span class="info-basket__quantity">0</span></p>
+                            <p class="info-basket__p">На сумму: <span class="info-basket__total-amount">0.00</span> <i class="fas fa-ruble-sign"></i></p>
+                        </div>
+                        <div class="button-mobile-menu">
+                            <i class="fas fa-bars button-mobile-menu__icon"></i>
+                        </div>
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            <div class="container">
+                <div class="wrapper-slider-info">
+                    <div class="slider">
+                        <div class="slider__active-slide">
+                            <a href="#" class="slider_prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+                            <a href="#" class="slider_next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                            <img src="" alt="" class="slider__active-img">
+                        </div>
+                        <div class="slide-list">
+                            <div
+                                    v-for="image in product.productImages"
+                                    :key="image.id"
+                                    class="wrap-slide"
+                                    v-bind:class="{ 'wrap-slide_active': image.active }"
+                            >
+                                    <img :src="image.link" :alt="image.textAlt" class="slide-list__slide">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h1 class="product-name">{{ product.productName }}</h1>
+                        <p class="product-price">Цена: <span class="price">{{ product.productPrice }}</span> <i class="fas fa-ruble-sign"></i></p>
+                        <div class="wrap-buttons">
+                            <button class="to-cart">В корзину</button>
+                            <button class="order-one-click">Закажите сейчас</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs">
+                    <ul class="list-tabs">
+                        <li class="list-tabs__description active">Описание</li>
+                        <li class="list-tabs__specifications">Характеристики</li>
+                    </ul>
+                    <div class="tab-content"></div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+
+            </div>
+        </footer>
+
+        <div class="modal-window modal-window_hidden"></div>
+        <div class="wrap-form wrap-form_hidden">
+            <form action="#" method="post" class="form-order">
+                <div class="form-order__close">
+                    <i class="far fa-times-circle"></i>
+                </div>
+                <label>Ваше имя:<br />
+                    <input type="text" name="name" class="user-name">
+                </label><br />
+                <label>Телефон:<br />
+                    <input type="tel" name="tel"  class="user-phone">
+                </label><br />
+                <input type="submit" class="form-order__submit-form">
+            </form>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/mobile.js"></script>
+
+</body>
+</html>

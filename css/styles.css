@@ -1,0 +1,327 @@
+body {
+  font-family: Roboto, sans-sarif; }
+
+.container, .container_header {
+  width: 1000px;
+  margin: 0 auto;
+  height: 100%; }
+
+.container_header {
+  display: flex;
+  justify-content: space-between; }
+
+.header {
+  height: 70px;
+  background-color: #1766ff;
+  box-shadow: 0 5px 5px #ccc; }
+
+.left-header-block {
+  display: flex; }
+
+.logo, .basket {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 70px; }
+
+.logo__img, .basket__icon, .button-mobile-menu__icon {
+  font-size: 50px;
+  color: #fff; }
+
+.menu {
+  margin-left: 30px; }
+
+.menu__item {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 70px;
+  line-height: 70px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 0 10px; }
+  .menu__item:hover {
+    border-bottom: 5px solid #fff; }
+
+.basket__mobile-info {
+  display: none;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  background-color: red;
+  color: #fff;
+  text-align: center;
+  border-radius: 20px; }
+
+.right-header-block {
+  display: flex;
+  cursor: pointer; }
+
+.info-basket {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 30px; }
+
+.info-basket__p {
+  color: #fff;
+  margin: 0; }
+  .info-basket__p:first-child {
+    margin-bottom: 5px; }
+
+.button-mobile-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 15px; }
+
+.content {
+  padding: 10px 0; }
+
+.wrapper-slider-info {
+  display: flex;
+  justify-content: start; }
+
+.slider {
+  width: 500px; }
+
+.slider__active-slide {
+  position: relative; }
+
+.slider__active-img {
+  width: 100%;
+  height: auto; }
+
+.slider_prev_next, .slider_prev, .slider_next {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: #000;
+  text-align: center;
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 15px;
+  opacity: 0.8; }
+
+.slider_prev {
+  position: absolute;
+  top: 45%;
+  left: 1%; }
+  .slider_prev:hover {
+    background-color: #313131; }
+
+.slider_next {
+  position: absolute;
+  top: 45%;
+  right: 1%; }
+  .slider_next:hover {
+    background-color: #313131; }
+
+.slide-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  padding: 5px; }
+
+.wrap-slide {
+  box-sizing: border-box;
+  width: 100px;
+  padding: 5px;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  cursor: pointer; }
+
+.slide-list__slide {
+  width: 100%;
+  height: auto; }
+
+.wrap-slide_active {
+  border: 3px solid #b20101;
+  border-radius: 5px; }
+
+.info {
+  margin-left: 30px; }
+
+button {
+  border: none;
+  background-color: #1766ff;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.5s; }
+  button:hover {
+    background-color: #668dff;
+    transition: 0.5s; }
+
+.list-tabs {
+  display: flex;
+  list-style-type: none;
+  padding: 0; }
+
+.tab-content {
+  min-height: 200px; }
+
+.list-tabs__description, .list-tabs__specifications {
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer; }
+  .list-tabs__description:hover, .list-tabs__specifications:hover {
+    border-bottom: 3px solid #ccc; }
+
+.list-tabs__specifications:hover {
+  border-bottom: 3px solid #ccc; }
+
+.active {
+  border-bottom: 3px solid #000; }
+  .active:hover {
+    border-bottom: 3px solid #000; }
+
+.specifications__tr {
+  height: 35px; }
+  .specifications__tr:nth-child(odd) {
+    background-color: #ccc; }
+
+.specifications__td {
+  padding: 0 30px; }
+
+.modal-window {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.8;
+  z-index: 9999; }
+
+.modal-window_hidden {
+  display: none; }
+
+.wrap-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 10000; }
+
+.wrap-form_hidden {
+  display: none !important; }
+
+.form-order {
+  position: relative;
+  top: 30%;
+  width: 400px;
+  height: 180px;
+  padding: 20px 30px;
+  background-color: #fff;
+  cursor: default; }
+  .form-order label {
+    display: inline-block;
+    width: 100%;
+    margin-top: 10px; }
+  .form-order input {
+    box-sizing: border-box;
+    width: 100%; }
+  .form-order input[type="submit"] {
+    margin-top: 20px;
+    border: none;
+    color: #fff;
+    background-color: #1766ff;
+    height: 40px;
+    cursor: pointer; }
+
+.form-order__close {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  font-size: 30px;
+  cursor: pointer; }
+  .form-order__close:hover {
+    color: red; }
+
+.footer {
+  height: 70px;
+  background-color: #1766ff; }
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .container, .container_header {
+    width: 750px; }
+
+  .info-basket {
+    display: none; }
+
+  .basket__mobile-info {
+    display: block; } }
+@media screen and (min-width: 200px) and (max-width: 767px) {
+  .container, .container_header {
+    width: 100%; }
+
+  .info-basket {
+    display: none; }
+
+  .basket__mobile-info {
+    display: block; }
+
+  .order-one-click {
+    margin-top: 10px; }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    flex-direction: column;
+    background-color: #1766ff;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    margin: 0; }
+
+  .menu__item {
+    display: block;
+    text-align: center; }
+
+  .logo, .basket {
+    padding: 0 10px; }
+
+  .button-mobile-menu {
+    display: flex; }
+
+  .slider {
+    width: 100%; }
+
+  .info {
+    margin: 0; }
+
+  .wrapper-slider-info {
+    flex-direction: column; }
+
+  .product-name {
+    text-align: center; }
+
+  .product-price {
+    font-size: 24px;
+    text-align: center; }
+
+  .wrap-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto; }
+    .wrap-buttons button {
+      width: 100%; }
+
+  .tab-content {
+    padding: 0 10px; }
+
+  .form-order {
+    width: 80%; } }
+
+/*# sourceMappingURL=styles.css.map */
