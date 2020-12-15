@@ -189,7 +189,7 @@ button {
   padding: 0 30px; }
 
 .modal-window {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -202,7 +202,7 @@ button {
   display: none; }
 
 .wrap-form {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   display: flex;
